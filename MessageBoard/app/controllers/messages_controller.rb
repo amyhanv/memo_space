@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
 	before_action :find_message, only: [:show, :edit, :update, :destroy] #executed code before any actions take place
-	before_action :authenticate_user!, except: [:index, :show] #can still view content when no signed up
-	
+	before_action :authenticate_user!, except: [:index, :show] #can still view content when no signed up creds to devise
+
 	def index
 		@messages = Message.all.order("created_at DESC")
 	end

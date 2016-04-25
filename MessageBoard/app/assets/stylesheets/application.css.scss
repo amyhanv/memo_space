@@ -13,5 +13,104 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+	background-color: #e8fbfb;
+	font-family: 'Raleway', sans-serif;
+	color: #3f9696;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Fjalla One', serif;
+	font-weight: 300;
+}
+
+.viewmsg-btn {
+	background-color: #ffdcbe;
+	color: #ae8869;
+	padding: 7px 10px;
+	margin-top: 40px;
+	&:hover {
+		transition: 0.4s;
+		background-color:#fff4ec;
+		color: #ae8869;
+		text-decoration: none;
+	}
+}
+
+.navbar {
+	background-color: #fff;
+	font-family: 'Fjalla One', sans-serif;
+	text-transform: uppercase;
+
+}
+
+.navbar-default {
+	padding-top: 5.5px;
+	padding-bottom: 5.5px;
+
+	.navbar-nav > li > a {
+		color:#ffdcbe;
+	}
+
+	.navbar-brand {
+		font-weight: 400;
+		letter-spacing: 1px;
+		color: #ffb171;
+		&:hover {
+			color: #3f6969;
+			text-decoration: none;
+		}
+	}
+
+}
+
+.message {
+	box-sizing: border-box;
+	background-color: #fff4ec;
+	margin-bottom: 25px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 1.4em 1.4em;
+	height: 150px;
+	border-bottom: 4px solid #ffc391;
+
+	.message-title {
+		font-weight: 300;
+		margin-top: 0;
+		margin-bottom: 25px;
+	}
+
+	.btn-custom {
+		margin-top: 20px;
+	}
+}
+
+ //Individual messages page
+.message-show {
+	box-sizing: border-box;
+	background-color: #fff4ec;
+	padding: 3.5em 3em;
+	border-bottom: 4px solid #ffc391;
+	margin-bottom: 50px;
+
+	.msg-post-by {
+		font-size: 11px;
+
+
+	}
+
+	.reply-to-msg {
+		margin-top: 50px;
+	}
+
+}
+
+
+
