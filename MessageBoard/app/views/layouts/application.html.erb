@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MessageBoard</title>
+  <title>memo_space</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,25 +11,27 @@
 	<div class= "navbar navbar-default">
 		<div class = "container">
 			<div class = "navbar-header">
-				<%= link_to "Message Board", root_path, class: "navbar-brand" %>
+				<%= link_to "memo_space", root_path, class: "navbar-brand" %>
 			</div>
 			<ul class ="nav navbar-nav">
 				<li>
-					<%= link_to "Sign up",new_user_registration_path %> 
+					<%= link_to "sign_up",new_user_registration_path %> 
 				</li>
 				<% if user_signed_in? %>
 					<li>
-						<%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to sign out?"}%> 
+						<%= link_to "sign_out", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure you want to sign out?"}%> 
 					</li>
 				<% else%>
 					<li>
-						<%= link_to "Log In", new_user_session_path %>
+						<%= link_to "sign_in", new_user_session_path %>
 					</li>
 				<% end %>
 			</ul>
 			<% if user_signed_in? %>
 					<p>
-						<%= link_to "New Message", new_message_path, class: "navbar-right navbar-text navbar-link" %> 
+						<%= link_to new_message_path, class: "navbar-right navbar-text btn btn-default" do %>
+						<i class = "glyphicon glyphicon-pencil" ></i>
+						<%end %>
 					</p>
 			<% end %>
 		</div>
